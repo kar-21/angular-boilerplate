@@ -1,6 +1,9 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
-  <mat-drawer mode="push" #drawer>Drawer content Item</mat-drawer>
+  <mat-drawer mode="push" #drawer
+    ><div class="drawer-content">Drawer content Item</div></mat-drawer
+  >
   <mat-drawer-content
-    ><app-toolbar [drawer]="drawer"></app-toolbar
+    ><app-toolbar [drawer]="drawer"></app-toolbar>
+    <div class="content"></div
   ></mat-drawer-content>
 </mat-drawer-container>
