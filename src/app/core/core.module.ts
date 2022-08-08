@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { MatListModule } from '@angular/material/list';
 
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -19,6 +20,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatIconModule,
     MatButtonModule,
     RouterModule,
+    MatListModule,
   ],
   exports: [
     SideNavComponent,
@@ -28,6 +30,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatListModule,
   ],
 })
 export class CoreModule {}

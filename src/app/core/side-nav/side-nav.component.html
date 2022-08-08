@@ -1,6 +1,15 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
   <mat-drawer mode="push" #drawer
-    ><div class="drawer-content">Drawer content Item</div></mat-drawer
+    ><div class="drawer-content">
+      <mat-selection-list #shoes [multiple]="false">
+        <a [routerLink]="['/']">
+          <mat-list-option>Feature One</mat-list-option>
+        </a>
+        <a [routerLink]="['/feature']">
+          <mat-list-option>Feature Two</mat-list-option>
+        </a>
+      </mat-selection-list>
+    </div></mat-drawer
   >
   <mat-drawer-content
     ><app-toolbar [drawer]="drawer"></app-toolbar>
