@@ -18,7 +18,7 @@ import { FeatureTwoModule } from './feature-two/feature-two.module';
     CoreModule,
     SharedModule,
     FeatureOneModule,
-    FeatureTwoModule
+    FeatureTwoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
