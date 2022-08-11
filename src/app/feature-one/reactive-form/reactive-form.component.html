@@ -1,0 +1,46 @@
+<form [formGroup]="form" class="example-form">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>First name</mat-label>
+          <input matInput formControlName="firstName" />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+</form>
+<app-button
+  [label]="buttonLabelSubmitName"
+  [color]="buttonColor.primary"
+  (onClick)="handelOnCLickEvent()"
+></app-button>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput [formControl]="emailFormControl" />
+    <mat-error
+      *ngIf="
+        emailFormControl.hasError('email') &&
+        !emailFormControl.hasError('required')
+      "
+    >
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+<app-button
+  [label]="buttonLabelSubmitEmail"
+  [color]="buttonColor.primary"
+  (onClick)="handelOnCLickEvent()"
+></app-button>

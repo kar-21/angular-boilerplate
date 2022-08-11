@@ -9,7 +9,6 @@ import { ButtonColor, ButtonType } from '../model/button.interface';
 export class ButtonComponent implements OnInit {
   @Input() label: string = '';
   @Input() color: ButtonColor = ButtonColor.default;
-  @Input() type: ButtonType = ButtonType.default;
   @Output() onClick: EventEmitter<Event> = new EventEmitter<Event>();
   constructor() {}
 
